@@ -9,15 +9,15 @@ import com.qa.hs.keyword.engine.KeyWordEngine;
  * @author Mohamed Gamal Abou-Daif
  *
  */
-public class LoginTest extends Base{
+public class TC1 extends Base{
 	
 	public KeyWordEngine keyWordEngine;
 	
 	@Test(enabled = true)
-	public void loginTest(){
+	public void searchTest(){
 		Base.childTest = Base.parentTest.createNode("Send Mail");
 		keyWordEngine = new KeyWordEngine();
-		keyWordEngine.startExecution("login");
+		keyWordEngine.startExecution("TC1");
 	}
 	
 	@Test(enabled = false)

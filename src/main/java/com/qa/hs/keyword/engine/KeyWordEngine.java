@@ -35,7 +35,7 @@ public class KeyWordEngine {
 	public WebElement element;
 
 	public final String SCENARIO_SHEET_PATH = System.getProperty("user.dir") 
-			+ "/src/main/java/com/qa/hs/keyword/scenarios/Senario.xlsx";
+			+ "/src/main/java/com/qa/hs/keyword/scenarios/Scenario.xlsx";
 
 	public KeyWordEngine()
 	{
