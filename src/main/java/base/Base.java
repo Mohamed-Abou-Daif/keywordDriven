@@ -1,4 +1,4 @@
-package com.qa.hs.keyword.base;
+package base;
 
 import java.io.File;
 import java.io.FileInputStream;
