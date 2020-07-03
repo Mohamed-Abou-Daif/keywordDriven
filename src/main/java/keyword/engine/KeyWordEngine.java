@@ -20,6 +20,7 @@ import org.openqa.selenium.support.ui.Select;
 import com.aventstack.extentreports.MediaEntityBuilder;
 
 import base.Base;
+import base.Constants;
 
 
 /**
@@ -37,8 +38,7 @@ public class KeyWordEngine {
 
 	public WebElement element;
 
-	public final String SCENARIO_SHEET_PATH = System.getProperty("user.dir") 
-			+ "/src/main/java/reuse/Scenario.xls";
+	public final String SCENARIO_SHEET_PATH = Constants.scenarionSheetPath;
 
 	public KeyWordEngine()
 	{
@@ -71,15 +71,13 @@ public class KeyWordEngine {
 				String locatorValue = sheet.getRow(i + 1).getCell(k + 2).toString().trim();
 				String action = sheet.getRow(i + 1).getCell(k + 3).toString().trim();
 				String value = sheet.getRow(i + 1).getCell(k + 4).toString().trim();
-				//String secondValue = sheet.getRow(i + 1).getCell(k + 5).toString().trim();
 
 				switch (action) {
 				case "open browser":
 					try {
 
-						prop = Base.init_properties();
 						if (value.isEmpty() || value.equals("NA")) {
-							driver = Base.init_driver(prop.getProperty("browser"));
+							driver = Base.init_driver(Constants.broswerName);
 						} else {
 							driver = Base.init_driver(value);
 						}
